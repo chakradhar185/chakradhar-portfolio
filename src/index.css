@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  @apply bg-slate-900/60 dark:bg-slate-900/60 backdrop-blur-xl border border-slate-800/80 dark:border-slate-800/80 shadow-xl;
+}
+
+.glass-panel-light {
+  @apply bg-white/70 backdrop-blur-xl border border-slate-200/80 shadow-lg;
+}
+
+.glass-card {
+  @apply bg-slate-900/50 dark:bg-slate-900/50 backdrop-blur-md border border-slate-800/60 transition-all duration-300 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5;
+}
+
+/* Light mode overrides for glass cards */
+.light .glass-panel {
+  @apply bg-white/80 backdrop-blur-xl border border-slate-200 shadow-xl shadow-slate-200/50;
+}
+
+.light .glass-card {
+  @apply bg-white/90 backdrop-blur-md border border-slate-200 shadow-md transition-all duration-300 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10;
+}
+
+.light body {
+  @apply bg-slate-50 text-slate-900;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+.light ::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
