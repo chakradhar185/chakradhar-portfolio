@@ -142,7 +142,7 @@ const Hero = () => {
                     src="./profile.jpg"
                     alt="M.S.S. CHAKRADHAR - AI & ML Student"
                     onError={() => setImgError(true)}
-                    className="w-full h-full object-cover rounded-full transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover object-top rounded-full transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
                   /* Fallback Profile Presentation when profile.jpg isn't placed yet */
